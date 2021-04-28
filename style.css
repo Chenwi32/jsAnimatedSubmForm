@@ -23,6 +23,7 @@ body{
     transform: translate(-45%, -45%);
     height: 50px;
     width: 40%;
+    min-width: 250px;
     background-color: white;
     display: flex;
     justify-content: space-between;
