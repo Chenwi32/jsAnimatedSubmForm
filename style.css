@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body{
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(23, 174, 66);
+    transition: background 0.5s ease;
+    flex-direction: column;
+} 
+
+.field-name,
+.field-email,
+.field-password,
+.field-finish{
+    position: absolute;
+    top: 47%;
+    left: 47%;
+    transform: translate(-45%, -45%);
+    height: 50px;
+    width: 40%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    padding: 0.3em;
+} 
+
+.field-name .i-effects,
+.field-email .i-effects,
+.field-password .i-effects{
+    cursor: pointer;
+}
+  
+.fa-envelope{
+    color: khaki;
+}
+
+
+.field-finish {
+    font-size: 1.5em;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    color: rgb(81, 83, 84);
+}
+
+.field-finish .fa-heart{
+ color: pink;
+}
+
+.field-name input,
+.field-email input,
+.field-password input{
+ width: 100%;
+ height: 100%;
+ outline: none;
+ border: none;
+ margin: 0 0.5em;
+ font-size: 1.5em;
+ font-family: sans-serif;
+ font-weight: 100;
+ letter-spacing: 0.1em;
+ color: rgb(81, 83, 84);
+ background-color: inherit;
+}
+ 
+div.inactive{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-45%, 45%);
+}
+
+div.active{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-45%, -45%);
+}
+#progress{
+    background-color: white;
+    height: fit-content;
+    min-width: 20%;
+    width: fit-content;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.5em;
+    align-self: center;
+    margin-top: 6em;
+}
+
+@keyframes shake{
+    0%{
+        transform: translate(-45%, -50%) rotate(0deg);
+    }
+    50%{
+        transform: translate(-45%, -50%) rotate(15deg);
+    }
+    100%{
+        transform: translate(-45%, -50%) rotate(0deg);
+    }
+}
